@@ -1,3 +1,18 @@
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js';
+import { getFunctions, httpsCallable } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-functions.js';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyD4emsl1KSyxP2Om_dgzUk-Jo1QB5zDeOo",
+  authDomain: "weather-backend-391cc.firebaseapp.com",
+  projectId: "weather-backend-391cc",
+  storageBucket: "weather-backend-391cc.appspot.com",
+  messagingSenderId: "454737132961",
+  appId: "1:454737132961:web:4de3dbaefd908ab7f91fe0"
+};
+
+const app = initializeApp(firebaseConfig);
+const functions = getFunctions(app);
+
 let searchList = JSON.parse(localStorage.getItem("searches")); 
 let nextSearch = JSON.parse(localStorage.getItem("new-search")); 
 let urlweb = "https://api.openweathermap.org";
@@ -14,7 +29,7 @@ let cities = [];
 document.getElementById('weatherForm').addEventListener('submit', function(event) {
     event.preventDefault();
     const city = document.getElementById('exampleInputCity').value;
-    const fetchWeatherData = firebase.functions().httpsCallable('fetchWeatherData');
+    const fetchWeatherData = httpsCallable(functions, 'fetchWeatherData');
   
     fetchWeatherData({ city })
       .then((result) => {
