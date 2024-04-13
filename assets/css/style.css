@@ -1,348 +1,120 @@
+style.css
+
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: "Sometype Mono", monospace;
-    font-weight: 400;
-    font-style: normal;
-    box-sizing: border-box;
-    justify-content: space-between;
-    unicode-bidi: isolate;
-    background-color: rgb(241, 243, 255);
+  display: block;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:400;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    unicode-bidi: isolate;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: #31343D;
+  display: flex;
+  width:100%;
 }
-
-ul {
-    flex-wrap: wrap;
-}
-
-/* Navigation top links */
-
-.nav_link1 li {
-    color:#94CCCB;
-    margin-inline-end: 12px;
-    padding: 1px 10px;
-    border-bottom: solid 4px #94CCCB;
-}
-
-.nav_title {
-    align-items: center;
-    display: flex;
-    padding-left: 80px;
-    background-color: #94CCCB;
-}
-
-.nav_link1 {
-    list-style: none;
-    margin: 10px 30px;
-}
-
-.nav_link1 li {
-    flex-wrap: wrap-reverse;
-    display: inline-block;
-    font-size: 24px;
-    text-decoration: none;
-}
-
-/* Pictures */
 
 img {
-    overflow-clip-margin: content-box;
-    overflow: clip;
-    width: 100%
-}
-#banner {
-    display: flex;
-}
-
-nav {
-}
-
-/* Top Navlink descriptors */
-
-#x {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    font-family: "Sometype Mono", monospace;
-    font-weight: 400;
-    font-style: normal;
-}
-
-a, href {
-    text-decoration: none;
-}
-
-/* Headers 1,2,3 and main */
-
-h1 {
-    display: flex;
-    justify-content: flex-start;
-    font-size: 50px;
-    color: #31343D;
-    text-wrap: nowrap;
-}
-
-h2 {
-    min-width: 300px;
-    font-size: 48px;
-    box-sizing: content-box;
-    color: #31343D;
-    padding-right: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-.nav_link1 h3 {
-    font-size: 30px;
-    text-decoration: none;
-    color: #94CCCB;
-}
-
-main {
-    padding: 20px;
-}
-
-/* Header, Body, Footer */
-
-.blocks {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    padding-left: 30px;
-    padding-right: 30px;
-    gap: 10px;
-}
-
-.blocks p {
-    display: flex;
-    width: min-content;
-    position:relative; left:0px; top:350px;
-    align-items: flex-end;
-    background-color: #94CCCB;
-}
-
-/* Interactive photos with links */
-
-.box {
-    display: grid;
-}
-
-.box1 {
-    display: flex;
-    transition: all 0.5s ease-in-out;
-    flex: 0 0 45em;
-    border: 15px solid #94CCCB;
-    margin: 4px;
-    background-image: url("../images/orchids.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.box1 p {
-    color: #31343D;
-    position:relative; left:0px; top:560px;
-}
-
-.box2 {
-    display: grid;
-    height: 500px;
-}
-
-.box2 p {
-    color: #31343D;
-}
-
-/* More IMG properties */
-
-#iguana {
-    background-image: url("../images/iguana.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 4px;
-    border: 15px solid #94CCCB;
-    grid-column: 1;
-    grid-row: 3;
-
-}
-
-#dog_seat {
-    background-image: url("../images/dog_seat.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 4px;
-    border: 15px solid #94CCCB;
-    grid-column: 2;
-    grid-row: 3;
-}
-
-#guitar {
-    background-image: url("../images/guitars.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 4px;
-    border: 15px solid #94CCCB;
-    grid-column: 1;
-    grid-row: 4;
-}
-
-#harley {
-    background-image: url("../images/harley.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 4px;
-    border: 15px solid #94CCCB;
-    grid-column: 2;
-    grid-row: 4;
-}
-
-div h2 {
-    text-align: right;
-    border-right: 5px solid;
-}
-
-.left_list {
-    display: flex;
-    flex-direction: row;
-}
-
-.left-list h2 {
-    display: flex;
-    justify-content: flex-end;
-}
-
-#cards {
-    display: block;
-    columns: auto;
+    display:flex;
     width: 100%;
+}
+
+div {
+  display:block;
 }
 
 p {
-    display: flex;
-    font-size: 26px;
-    color: #31343D;
+  margin: 3px;
+  font-size: 20px;
 }
 
-#cards p {
-    display: flex;
-    padding: 20px;
+#main {
+  display: flex;
 }
 
-#cards h2 {
-    display: block;
+.form {
+  display: flex;
+  margin: 10px;
+  padding: 10px;
 }
 
-#y {
-    color: #31343D;
-    display: flex;
-    align-items: center;
-    justify-content: stretch;
-    flex-grow: 3;
+.form-label {
+    font-weight: bold;
+    font-size: xx-large;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
 }
 
-#y ul {
-    display: flex;
-    width: 100%;
+.form-control {
+    margin-top:10px;
+    
 }
 
-/* Footer Nav Link */
-
-.nav_link2 {
-    display: flex;
-    list-style: none;
-    font-size: 28px;
-    justify-content: center;
+#weatherForm {
+  display:block
 }
 
-.nav_link2 li {
-    text-decoration: none;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-inline-end: 12px;
-    padding: 1px 10px;
-    border-bottom: solid 4px #31343D;
+form {
+  display: block;
+  margin:10px 
 }
 
-.nav_link2 h3 {
-    font-size: 33px;
-    text-decoration: none;
-    color: #31343D;
+h6 {
+  margin: 0;
+  font-size: small;
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 footer {
-    display: block;
+  border: solid black 3px;
+  text-align: center;
 }
 
-.copystamp {
-    display: none;
+#page-container {
+    position: relative;
+    min-height: 100vh;
 }
 
-/* Media Query */
-
-@media screen and (max-width: 500px) {
-    .row {
-        display: flex;
-        flex-wrap: wrap;
-    }
+#content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
 }
 
-/* Hover animation */
-
-.box1:hover {
-    border-color: rgb(98, 184, 249);
-    background-color: rgb(98, 184, 249);
-    color: #31343D;
-    transition: all .6s ease-in-out;
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;            /* Footer height */
 }
 
-#iguana:hover {
-    border-color: rgb(98, 184, 249);
-    background-color: rgb(98, 184, 249);
-    color: #31343D;
-    transition: all .6s ease-in-out;
+.btn {
+    width: 100%;
+    border-radius: 4px;
+    background-color: #206fc2;
+    color:white;
+    padding:5px;
+
+}
+.btn-primary:hover {
+    box-shadow: 0 10px 8px 0 rgba(55, 52, 52, 0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-#dog_seat:hover {
-    border-color: rgb(98, 184, 249);
-    background-color: rgb(98, 184, 249);
-    color: #31343D;
-    transition: all .6s ease-in-out;
-}
-
-#guitar:hover {
-    border-color: rgb(98, 184, 249);
-    background-color: rgb(98, 184, 249);
-    color: #31343D;
-    transition: all .6s ease-in-out;
-}
-
-#harley:hover {
-    border-color: rgb(98, 184, 249);
-    background-color: rgb(98, 184, 249);
-    color: #31343D;
-    transition: all .6s ease-in-out;
-}
-
-.box1 p:hover {
-    background-color: rgb(98, 184, 249);
-    color: #31343D;
-    transition: all .6s ease-in-out;
-}
-
-.box2 p:hover {
-    background-color: rgb(98, 184, 249);
-    color: #31343D;
-    transition: all .6s ease-in-out;
+.border-box {
+    width: 100%;
+    margin-top:10px;
+    border: 2px solid black;
 }
