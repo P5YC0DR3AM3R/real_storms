@@ -1,0 +1,348 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Sometype Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+    justify-content: space-between;
+    unicode-bidi: isolate;
+    background-color: rgb(241, 243, 255);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    unicode-bidi: isolate;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #31343D;
+}
+
+ul {
+    flex-wrap: wrap;
+}
+
+/* Navigation top links */
+
+.nav_link1 li {
+    color:#94CCCB;
+    margin-inline-end: 12px;
+    padding: 1px 10px;
+    border-bottom: solid 4px #94CCCB;
+}
+
+.nav_title {
+    align-items: center;
+    display: flex;
+    padding-left: 80px;
+    background-color: #94CCCB;
+}
+
+.nav_link1 {
+    list-style: none;
+    margin: 10px 30px;
+}
+
+.nav_link1 li {
+    flex-wrap: wrap-reverse;
+    display: inline-block;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+/* Pictures */
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    width: 100%
+}
+#banner {
+    display: flex;
+}
+
+nav {
+}
+
+/* Top Navlink descriptors */
+
+#x {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family: "Sometype Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a, href {
+    text-decoration: none;
+}
+
+/* Headers 1,2,3 and main */
+
+h1 {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 50px;
+    color: #31343D;
+    text-wrap: nowrap;
+}
+
+h2 {
+    min-width: 300px;
+    font-size: 48px;
+    box-sizing: content-box;
+    color: #31343D;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.nav_link1 h3 {
+    font-size: 30px;
+    text-decoration: none;
+    color: #94CCCB;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Header, Body, Footer */
+
+.blocks {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-left: 30px;
+    padding-right: 30px;
+    gap: 10px;
+}
+
+.blocks p {
+    display: flex;
+    width: min-content;
+    position:relative; left:0px; top:350px;
+    align-items: flex-end;
+    background-color: #94CCCB;
+}
+
+/* Interactive photos with links */
+
+.box {
+    display: grid;
+}
+
+.box1 {
+    display: flex;
+    transition: all 0.5s ease-in-out;
+    flex: 0 0 45em;
+    border: 15px solid #94CCCB;
+    margin: 4px;
+    background-image: url("../images/orchids.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.box1 p {
+    color: #31343D;
+    position:relative; left:0px; top:560px;
+}
+
+.box2 {
+    display: grid;
+    height: 500px;
+}
+
+.box2 p {
+    color: #31343D;
+}
+
+/* More IMG properties */
+
+#iguana {
+    background-image: url("../images/iguana.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 4px;
+    border: 15px solid #94CCCB;
+    grid-column: 1;
+    grid-row: 3;
+
+}
+
+#dog_seat {
+    background-image: url("../images/dog_seat.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 4px;
+    border: 15px solid #94CCCB;
+    grid-column: 2;
+    grid-row: 3;
+}
+
+#guitar {
+    background-image: url("../images/guitars.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 4px;
+    border: 15px solid #94CCCB;
+    grid-column: 1;
+    grid-row: 4;
+}
+
+#harley {
+    background-image: url("../images/harley.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 4px;
+    border: 15px solid #94CCCB;
+    grid-column: 2;
+    grid-row: 4;
+}
+
+div h2 {
+    text-align: right;
+    border-right: 5px solid;
+}
+
+.left_list {
+    display: flex;
+    flex-direction: row;
+}
+
+.left-list h2 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#cards {
+    display: block;
+    columns: auto;
+    width: 100%;
+}
+
+p {
+    display: flex;
+    font-size: 26px;
+    color: #31343D;
+}
+
+#cards p {
+    display: flex;
+    padding: 20px;
+}
+
+#cards h2 {
+    display: block;
+}
+
+#y {
+    color: #31343D;
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    flex-grow: 3;
+}
+
+#y ul {
+    display: flex;
+    width: 100%;
+}
+
+/* Footer Nav Link */
+
+.nav_link2 {
+    display: flex;
+    list-style: none;
+    font-size: 28px;
+    justify-content: center;
+}
+
+.nav_link2 li {
+    text-decoration: none;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-inline-end: 12px;
+    padding: 1px 10px;
+    border-bottom: solid 4px #31343D;
+}
+
+.nav_link2 h3 {
+    font-size: 33px;
+    text-decoration: none;
+    color: #31343D;
+}
+
+footer {
+    display: block;
+}
+
+.copystamp {
+    display: none;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 500px) {
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+/* Hover animation */
+
+.box1:hover {
+    border-color: rgb(98, 184, 249);
+    background-color: rgb(98, 184, 249);
+    color: #31343D;
+    transition: all .6s ease-in-out;
+}
+
+#iguana:hover {
+    border-color: rgb(98, 184, 249);
+    background-color: rgb(98, 184, 249);
+    color: #31343D;
+    transition: all .6s ease-in-out;
+}
+
+#dog_seat:hover {
+    border-color: rgb(98, 184, 249);
+    background-color: rgb(98, 184, 249);
+    color: #31343D;
+    transition: all .6s ease-in-out;
+}
+
+#guitar:hover {
+    border-color: rgb(98, 184, 249);
+    background-color: rgb(98, 184, 249);
+    color: #31343D;
+    transition: all .6s ease-in-out;
+}
+
+#harley:hover {
+    border-color: rgb(98, 184, 249);
+    background-color: rgb(98, 184, 249);
+    color: #31343D;
+    transition: all .6s ease-in-out;
+}
+
+.box1 p:hover {
+    background-color: rgb(98, 184, 249);
+    color: #31343D;
+    transition: all .6s ease-in-out;
+}
+
+.box2 p:hover {
+    background-color: rgb(98, 184, 249);
+    color: #31343D;
+    transition: all .6s ease-in-out;
+}
