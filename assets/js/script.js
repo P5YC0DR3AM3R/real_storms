@@ -26,6 +26,28 @@ const searchCity = document.querySelector("#city");
 
 let cities = [];
 
+function search() {
+  let input = document.getElementById("search").value; 
+  let resultsDiv = document.getElementById("results");
+
+  let myApiKey = "your-api-key-here";
+  let apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + encodeURIComponent(input) + "&appid=" + myApiKey;
+
+  fetch(apiUrl)
+      .then(response => response.json())
+      .then(data => {
+          if (data.results && data.results.length > 0) {
+              resultsDiv.innerHTML = "Display your search results here"; 
+          } else {
+              resultsDiv.innerHTML = "No results found.";
+          }
+      })
+      .catch(error => {
+          console.error('Error fetching data:', error);
+          resultsDiv.innerHTML = "Error loading results.";
+      });
+}
+
 document.getElementById('weatherForm').addEventListener('submit', function(event) {
     event.preventDefault();
     const city = document.getElementById('exampleInputCity').value;
@@ -47,26 +69,4 @@ function displayWeather(data) {
       <p>Temperature: ${data.main.temp} °C</p>
       <p>Weather: ${data.weather[0].main}</p>
     `;
-}
-
-function search() {
-    let input = document.getElementById("search").value; 
-    let resultsDiv = document.getElementById("results");
-
-    let myApiKey = "your-api-key-here";
-    let apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + encodeURIComponent(input) + "&appid=" + myApiKey;
-
-    fetch(apiUrl)
-        .then(response => response.json())
-        .then(data => {
-            if (data.results && data.results.length > 0) {
-                resultsDiv.innerHTML = "Display your search results here"; 
-            } else {
-                resultsDiv.innerHTML = "No results found.";
-            }
-        })
-        .catch(error => {
-            console.error('Error fetching data:', error);
-            resultsDiv.innerHTML = "Error loading results.";
-        });
-}
+};
