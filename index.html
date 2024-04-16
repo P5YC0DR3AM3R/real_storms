@@ -20,29 +20,28 @@
             <section class="form">
                 <form id="weatherForm">
                     <div class="mb-3">
-                      <label for="exampleInputCity" class="form-label">Search for a city:</label>
-                      <input type="text" class="form-control" id="exampleInputCity" aria-describedby="cityHelp">
+                        <label for="search" class="form-label">Search for a city:</label>
+                        <input type="text" class="form-control" id="search" aria-describedby="cityHelp">
                     </div>
-                    <button type="submit" class="btn btn-primary">SEARCH</button>
+                    <button type="submit" class="btn btn-primary" id="button">SEARCH</button>
                   </form>
             </section>
             <div class="b-b">
-                <div class="border-box">
-                    // return current city weather //
-                </div>
+                <div class="border-box" id="sr"></div>
             </div>
+            <div id="forecast-weather" data-city-cards-container></div>
         </div>
         <div id="page-container">
             <div id="content-wrap">
                 <footer id="footer">
                     <h6>Made with ❤️️ by Micah Read</h6>
-                    p>&copy; 2024 P5YC0DR3AM3R CREATIONS</p>
+                    <p>&copy; 2024 P5YC0DR3AM3R CREATIONS</p>
                 </footer>
             </div>
         </div>
     </div>
 
-<script src="assets/js/script.js" type="module"></script>
+<script src="./assets/js/script.js"></script>
 
 </body>
 </html>
