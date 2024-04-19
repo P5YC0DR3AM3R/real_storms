@@ -1,3 +1,4 @@
+
 let searchList = JSON.parse(localStorage.getItem("searches")); 
 let nextSearch = JSON.parse(localStorage.getItem("new-search"));
 let myApiKey = "4fda26b59cdc8f39454c721dd831bde9";
@@ -27,7 +28,7 @@ function search() {
   
   let input = document.getElementById("search").value; 
   let resultsDiv = document.getElementById("results");
-
+  forecastSearch(input);
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${myApiKey}&units=imperial`;
 
   fetch(apiUrl)
@@ -60,7 +61,14 @@ const forecastSearch = function (city) {
       .then(function (data) {
         console.log(data);
         displayForecast(data);
-        localStorage.setItem('forecast', (JSON.stringify(data)));
+        // const lat = data.coord.lat;
+        // console.log(lat);
+        // const lon = data.coord.lon;
+        // console.log(lon);
+        // const cityName = data.name;
+        // console.log(cityName);
+        // getForecast(lat, lon, cityName);
+        // localStorage.setItem('forecast', (JSON.stringify(data)));
       })
       .catch(function (error) {
           console.error('There was a problem with the fetch operation:', error);
@@ -135,7 +143,7 @@ const displayForecast = function (data) {
 const forecastDate = function (i) {
   let today = dayjs();
 
-  let forecastDay = today.add(i + 0, 'day').format('MM/DD/YYY');
+  let forecastDay = today.add(i + 0, 'day').format('MM/DD/YYYY');
   return forecastDay;
 };
 

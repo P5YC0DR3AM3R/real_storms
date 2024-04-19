@@ -80,6 +80,17 @@ input, textarea {
   margin-bottom: 10px;
 }
 
+.forecast-card {
+  background-color: lightgray;
+  width: 100%;
+  margin-top:10px;
+  border: 2px solid black;
+}
+
+#forecast-weather {
+  display: flex;
+}
+
 footer {
   border: solid black 3px;
   text-align: center;
@@ -116,5 +127,4 @@ footer {
     background-color: lightgray;
     width: 100%;
     margin-top:10px;
-    border: 2px solid black;
 }
