@@ -1,7 +1,17 @@
 
 let searchList = JSON.parse(localStorage.getItem("searches")); 
 let nextSearch = JSON.parse(localStorage.getItem("new-search"));
-let myApiKey = "4fda26b59cdc8f39454c721dd831bde9";
+let myApiKey = "";
+function weatherKey() {
+  if (myApiKey) return myApiKey;
+  myApiKey = localStorage.getItem("owm_key") || "";
+  if (!myApiKey) {
+    myApiKey = window.prompt("OpenWeather API key. Stored only in this browser.") || "";
+    if (myApiKey) localStorage.setItem("owm_key", myApiKey);
+  }
+  return myApiKey;
+}
+
 let urlweb = "https://api.openweathermap.org";
 
 // Fix the syntax for querying DOM elements
@@ -25,11 +35,14 @@ const pastCitiesArray = function (city) {
 };
 
 function search() {
-  
+  if (!weatherKey()) {
+    document.getElementById("results").innerHTML = "Set an OpenWeather API key first.";
+    return;
+  }
   let input = document.getElementById("search").value; 
   let resultsDiv = document.getElementById("results");
   forecastSearch(input);
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${myApiKey}&units=imperial`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${weatherKey()}&units=imperial`;
 
   fetch(apiUrl)
       .then(response => response.json())
@@ -47,7 +60,7 @@ function search() {
 
 //fetch forecast
 const forecastSearch = function (city) {
-  const queryURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${myApiKey}&units=imperial`;
+  const queryURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${weatherKey()}&units=imperial`;
 
   fetch(queryURL)
       .then(function (response) {

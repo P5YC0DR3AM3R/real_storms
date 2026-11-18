@@ -1,3 +1,9 @@
+> **Status:** classroom exercise, 2024. Not a Phygital-DevOps production app.
+>
+> Browser weather dashboard. Needs your own OpenWeather key, stored only in the browser.
+>
+> 2026 baseline: secrets stay out of source, Actions are pinned, placeholder packages are gone, CI checks this tree.
+
 # Real Storms
 
 Weather Dashboard useful for quick look updates and forecasts.
